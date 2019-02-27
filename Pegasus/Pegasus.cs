@@ -37,7 +37,7 @@ namespace Pegasus
 
             try
             {
-                ConfigManager.Initialise($"{Directory.GetCurrentDirectory()}\\Config.json");
+                ConfigManager.Initialise(Path.Combine(Directory.GetCurrentDirectory(), "Config.json"));
                 PacketManager.Initialise();
                 DatabaseManager.Initialise();
                 DungeonTileManager.Initialise();
