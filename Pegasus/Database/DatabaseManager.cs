@@ -10,6 +10,15 @@ namespace Pegasus.Database
 {
     public static class DatabaseManager
     {
+
+        public static void Initialise()
+        {
+            using (var context = new DatabaseContext())
+            {
+                context.Database.EnsureCreated();
+            }
+        }
+
         public static Account CreateAccount(string username, string password, IPAddress ip, Privilege privileges)
         {
             using (var context = new DatabaseContext())
@@ -33,7 +42,7 @@ namespace Pegasus.Database
                 return context.Account.SingleOrDefault(a => a.Username == username);
         }
 
-        public static void UpdateAccount(uint id, IPAddress ip)
+        public static void UpdateAccount(int id, IPAddress ip)
         {
             using (var context = new DatabaseContext())
             {
@@ -50,7 +59,7 @@ namespace Pegasus.Database
             }
         }
 
-        public static void AddFriend(uint id, uint friendId)
+        public static void AddFriend(int id, int friendId)
         {
             using (var context = new DatabaseContext())
             {
@@ -64,7 +73,7 @@ namespace Pegasus.Database
             }
         }
 
-        public static void RemoveFriend(uint id, uint friendId)
+        public static void RemoveFriend(int id, int friendId)
         {
             using (var context = new DatabaseContext())
             {
@@ -78,7 +87,7 @@ namespace Pegasus.Database
             }
         }
 
-        public static List<string> GetFriends(uint id)
+        public static List<string> GetFriends(int id)
         {
             using (var context = new DatabaseContext())
             {
@@ -90,7 +99,7 @@ namespace Pegasus.Database
             }
         }
 
-        public static List<string> GetReverseFriends(uint id)
+        public static List<string> GetReverseFriends(int id)
         {
             using (var context = new DatabaseContext())
             {

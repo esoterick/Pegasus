@@ -7,6 +7,7 @@ using Pegasus.Configuration;
 using Pegasus.Map;
 using Pegasus.Network;
 using Pegasus.Social;
+using Pegasus.Database;
 
 namespace Pegasus
 {
@@ -38,6 +39,7 @@ namespace Pegasus
             {
                 ConfigManager.Initialise($"{Directory.GetCurrentDirectory()}\\Config.json");
                 PacketManager.Initialise();
+                DatabaseManager.Initialise();
                 DungeonTileManager.Initialise();
                 NetworkManager.Initialise();
 

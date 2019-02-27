@@ -9,7 +9,7 @@ namespace Pegasus.Network.Packet.Raw.Model
     {
         public class Dungeon
         {
-            public ushort LandBlockId { get; }
+            public short LandBlockId { get; }
             public string Name { get; }
 
             public Dungeon(DungeonInfo dungeonInfo)

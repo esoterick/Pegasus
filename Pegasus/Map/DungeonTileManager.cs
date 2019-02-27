@@ -10,7 +10,7 @@ namespace Pegasus.Map
     {
         private static readonly Logger log = LogManager.GetCurrentClassLogger();
 
-        private static readonly Dictionary<ushort, DungeonInfo> dungeons = new Dictionary<ushort, DungeonInfo>();
+        private static readonly Dictionary<short, DungeonInfo> dungeons = new Dictionary<short, DungeonInfo>();
 
         public static void Initialise()
         {
@@ -20,7 +20,7 @@ namespace Pegasus.Map
                 dungeons.Add(dungeon.LandBlockId, new DungeonInfo(dungeon));
         }
 
-        public static DungeonInfo GetDungeonInfo(ushort landBlockId)
+        public static DungeonInfo GetDungeonInfo(short landBlockId)
         {
             return dungeons.TryGetValue(landBlockId, out DungeonInfo dungeonInfo) ? dungeonInfo : null;
         }

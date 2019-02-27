@@ -5,9 +5,9 @@ namespace Pegasus.Map
 {
     public class DungeonTileInfo
     {
-        public uint Id { get; }
-        public ushort LandBlockId { get; }
-        public ushort TileId { get; }
+        public int Id { get; }
+        public short LandBlockId { get; }
+        public short TileId { get; }
         public Vector3 Origin { get; }
 
         public DungeonTileInfo(DungeonTile dungeonTile)

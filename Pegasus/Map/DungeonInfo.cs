@@ -8,7 +8,7 @@ namespace Pegasus.Map
     public class DungeonInfo : IEnumerable<DungeonTileInfo>
     {
         public string Name { get; }
-        public ushort LandBlockId { get; }
+        public short LandBlockId { get; }
 
         private readonly List<DungeonTileInfo> tiles;
 
