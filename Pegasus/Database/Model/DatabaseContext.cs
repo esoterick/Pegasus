@@ -35,7 +35,7 @@ namespace Pegasus.Database.Model
                 string dbSSLMode = Environment.GetEnvironmentVariable("PEGASUS_DB_SSL_MODE");
                 string dbTrustServerCert = Environment.GetEnvironmentVariable("PEGASUS_DB_TRUST_SERVER_CERT");
 
-                optionsBuilder.UseNpgsql($"server={dbHostname};port={dbPort};username={dbUsername};password={dbPassword};database={dbDatabase};SSL Mode={dbSSLMode};Trust Server Certificate={dbTrustServerCert};pgexclude=extra_float_digits");
+                optionsBuilder.UseNpgsql($"server={dbHostname};port={dbPort};username={dbUsername};password={dbPassword};database={dbDatabase};SSL Mode={dbSSLMode};Trust Server Certificate={dbTrustServerCert}");
             } 
         }
 
